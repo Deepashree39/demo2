@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <center>
-    <div class="container">
-        <header>
-            <h1>My Profile</h1>
-        </header>
-        
-        <main>
-            <section class="profile-info">
-                <img src="img.jpg" alt="Profile Picture">
-                <h2><strong>About Me</strong></h2>
-                 <p>I am Deepashree N.G, a committed Computer Science Engineering student. With a solid grounding in programming languages and problem-solving skills, I am keen to apply my technical knowledge to real-world challenges. I am enthusiastic about exploring new technologies and contributing to impactful projects.</p>
 
-                
-                <section class="links">
-                    <ul>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="biodata.html">Bio-data</a></li>
-                        <li><a href="contact.html">Contact details</a></li>
-                    </ul>
-                </section>
-            </section>
-        </center>
-           
-        </main>
+    <!-- Heading for the form -->
+    <h1 class="main-heading">Registration Form</h1>
+
+    <div class="form-container">
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Register</button>
+            </div>
+        </form>
+
+        <div id="registrationDetails" class="details-container" style="display: none;">
+            <h3>Registration Details</h3>
+            <p><strong>Full Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+            <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+        </div>
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
-
